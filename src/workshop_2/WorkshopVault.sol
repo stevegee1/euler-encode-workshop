@@ -166,7 +166,7 @@ contract WorkshopVault is ERC4626, IVault, IWorkshopVault {
         //Therefore, loan_value > debt ? accountHealthy: accountUnHealthyStatus;
 
         /////////////////////////////////////HARDCODED/////////////////////////////
-        //  require(accountDebt < type(uint104).max, "unhealthy Account");
+          require(accountDebt < type(uint104).max, "unhealthy Account");
 
         return IVault.checkAccountStatus.selector;
     }
